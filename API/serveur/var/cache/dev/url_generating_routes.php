@@ -6,7 +6,9 @@ return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],
     'add_book' => [[], ['_controller' => 'App\\Controller\\BookController::add'], [], [['text', '/book']], [], []],
     'get_one_book' => [['id'], ['_controller' => 'App\\Controller\\BookController::get'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/book']], [], []],
+    'buy_book' => [['id', 'stock'], ['stock' => null, '_controller' => 'App\\Controller\\BookController::buyBook'], [], [['variable', '/', '[^/]++', 'stock', true], ['text', '/buy'], ['variable', '/', '[^/]++', 'id', true], ['text', '/book']], [], []],
     'get_all_books' => [[], ['_controller' => 'App\\Controller\\BookController::getAll'], [], [['text', '/book']], [], []],
     'update_book' => [['id'], ['_controller' => 'App\\Controller\\BookController::update'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/book']], [], []],
     'delete_book' => [['id'], ['_controller' => 'App\\Controller\\BookController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/book']], [], []],
+    'add_stock' => [[], ['_controller' => 'App\\Controller\\StockController::add'], [], [['text', '/stock']], [], []],
 ];
